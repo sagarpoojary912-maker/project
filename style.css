@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f4fff4;
+}
+
+h1 {
+    color: green;
+}
+
+form input {
+    margin: 5px;
+    padding: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    background: green;
+    color: white;
+    border: none;
+}
+
+table {
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buyer - Purchase Crops</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🛒 Buyer - Purchase Crops</h1>
+
+<table border="1">
+<tr>
+    <th>Crop</th>
+    <th>Price</th>
+    <th>Available Qty</th>
+    <th>Farmer</th>
+    <th>Buy</th>
+</tr>
+
+{% for crop in crops %}
+<tr>
+    <td>{{ crop.name }}</td>
+    <td>₹{{ crop.price }}</td>
+    <td>{{ crop.quantity }}</td>
+    <td>{{ crop.farmer }}</td>
+    <td>
+        <form action="/purchase/{{ crop.id }}" method="post">
+            <input type="number" name="buy_qty" placeholder="Qty" required>
+            <button type="submit">Buy</button>
+        </form>
+    </td>
+</tr>
+{% endfor %}
+</table>
+
+<br>
+<a href="/">⬅ Back to Farmer Page</a>
+
+</body>
+</html>
